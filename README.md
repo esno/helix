@@ -1,3 +1,11 @@
+# helix
+
+this is a prototype to configure dna75 chips on linux distributions.
+
+## dependencies
+
+* python-hidapi (https://github.com/trezor/cython-hidapi)
+
 # dna75 chip info
 
 ## dmesg
