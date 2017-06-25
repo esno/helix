@@ -147,3 +147,24 @@
             bInterval               0
     Device Status:     0x0000
       (Bus Powered)
+
+# USB
+
+## GET DESCRIPTOR (DEVICE)
+
+discover device information
+
+* device class/subclass
+* device protocol
+* max packet size
+* vendor id
+* product id
+* manufacturer
+* product
+* serial no
+* number of possible configurations
+
+## GET DESCRIPTOR (CONFIGURATION)
+
+all USB devices have at least one configuration descriptor. the amount of config descriptors is returned in the device descriptor.
+each configuration descriptor has at least one interface descriptor and each interface descriptor up to 15 endpoints descriptors.
