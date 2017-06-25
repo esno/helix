@@ -188,3 +188,183 @@ requests the device usages and reports that describes the device characteristics
 ## SET INTERFACE
 
 select an alternative setting to be used for particular interface of the current configuration.
+
+# wireshark dumped messages
+
+    GET DESCRIPTOR Request DEVICE
+      bmRequestType: 0x80
+      bRequest: GET DESCRIPTOR (6)
+      Descriptor Index: 0x00
+      bDescriptorType: 0x01
+      Language Id: no language specified (0x0000)
+      wLength: 18
+
+    GET DESCRIPTOR Response DEVICE
+      bLength: 18
+      DescriptorType: 0x01 (DEVICE)
+      bcdUSB: 0x0200
+      bDeviceClass: Miscellaneous (0xef)
+      bDeviceSubClass: 2
+      bDeviceProtocol: 1 (Interface Association Descriptor)
+      bMaxPacketSize0: 64
+      idVendor: 0x268b
+      idProduct: 0x0408
+      bcdDevice: 0x0100
+      iManufacturer: 2
+      iProduct: 3
+      iSerialNumber: 1
+      bNumConfigurations: 1
+
+    GET DESCRIPTOR Request Configuration
+      bmRequestType: 0x80
+      bRequest: GET DESCRIPTOR (6)
+      Descriptor Index: 0x00
+      bDescriptorType: 0x02
+      Language Id: no language specified (0x0000)
+      wLength: 9
+
+    GET DESCRIPTOR Response Configuration
+      bLength: 9
+      bDescriptorType: 0x02 (CONFIGURATION)
+      wTotalLength: 107
+      bNumInterfaces: 3
+      bConfigurationValue: 1
+      iConfiguration: 0
+      Configuration bmAttributes: 0x80 (NOT SELF-POWERED, NO REMOTE-WAKEUP)
+      bMaxPower: 250 (500mA)
+
+     GET DESCRIPTOR Request Configuration
+      bmRequestType: 0x80
+      bRequest: GET DESCRIPTOR (6)
+      Descriptor Index: 0x00
+      bDescriptorType: 0x02
+      Language Id: no language specified (0x0000)
+      wLength: 107
+
+    GET DESCRIPTOR Response Configuration
+      bLength: 9
+      bDescriptorType: 0x02 (CONFIGURATION)
+      wTotalLength: 107
+      bNumInterfaces: 3
+      bConfigurationValue: 1
+      iConfiguration: 0
+      Configuration bmAttributes: 0x08
+      bMaxPower: 250 (500mA)
+
+      INTERFACE DESCRIPTOR (0.0): class HID
+        bLength: 9
+        bDescriptorType: 0x04 (INTERFACE)
+        bInterfaceNumber: 0
+        bAlternateSetting: 0
+        bNumEndpoints: 2
+        bInterfaceClass: HID (0x03)
+        bInterfaceSubClass: No subclass (0x00)
+        bInterfaceProtocol: 0x00
+        iInterface: 0
+
+      HID DESCRIPTOR
+        bLength: 9
+        bDescriptorType: 0x21 (HID)
+        bcdHID: 0x0110
+        bContryCode: Not Supported (0x00)
+        bNumDescriptors: 1
+        bDescriptorType: HID Report (0x22)
+        wDescriptorLength: 31
+
+      ENDPOINT DESCRIPTOR
+        bLength: 7
+        bDescriptorType: 0x05 (ENDPOINT)
+        bEndpointAddress: 0x81 IN Endpoint:1
+        bmAttributes; 0x03
+        wMaxPacketSize: 64
+        bInterval: 1
+
+      ENDPOINT DESCRIPTOR
+        bLength: 7
+        bDescriptorType: 0x05 (ENDPOINT)
+        bEndpointAddress: 0x01 OUT ENDPOINT:1
+        bmAttributes 0x03
+        wMaxPacketSize: 64
+        bInterval: 1
+
+      INTERFACE ASSOCIATION DESCRIPTOR
+        bLength: 8
+        bDescriptorType: 0x0b (INTERFACE ASSOCIATION)
+        bFirstInterface: 1
+        bInterfaceCount: 2
+        bFunctionClass: Communications and CDC Control (0x02)
+        bFunctionSubClass: 0x02
+        bFunctionProtocol: 0x01
+        iFunction: 0
+
+      INTERFACE DESCRIPTOR (1.0): class Communications and CDC Control
+        bLength: 9
+        bDescriptorType: 0x04 (INTERFACE)
+        bInterfaceNumber: 1
+        bAlternateSetting: 0
+        bNumEndpoints: 1
+        bInterfaceClass: Communications and CDC Control (0x02)
+        bInterfaceSubClass: Abstract Control Model (0x02)
+        bInterfaceProtocol: AT Commands: V.250 etc (0x01)
+        iInterface: 0
+
+      COMMUNICATIONS DESCRIPTOR
+        bLength: 5
+        bDescriptorType: 0x24 (CS_INTERFACE)
+        Descriptor Subtype: Header Functional Descriptor (0x00)
+        CDC: 0x0110
+
+      COMMUNICATIONS DESCRIPTOR
+        bLength: 4
+        bDescriptorType: 0x24 (CS_INTERFACE)
+        Descriptor Subtype: Abstract Control Management Functional Descriptor (0x02)
+        bmCapabilities: 0x06
+
+      COMMUNICATIONS DESCRIPTOR
+        bLength: 5
+        bDescriptorType: 0x24 (CS_INTERFACE)
+        Descriptor Subtype: Call Management Functional Descriptor (0x01)
+        bmCapabilities: 0x00
+        Data Interface: 0x02
+
+      COMMUNICATIONS DESCRIPTOR
+        bLength: 5
+        bDescriptorType: 0x24 (CS_INTERFACE)
+        Descriptor Subtype: Union Functional Descriptor (0x06)
+        Control Interface: 0x01
+        Subordinate Interface: 0x02
+
+      ENDPOINT DESCRIPTOR
+        bLength: 7
+        bDescriptorType: 0x05 (ENDPOINT)
+        bEndpointAddress: 0x84 IN Endpoint:4
+        bmAttributes: 0x03
+        wMaxPacketSize: 64
+        bInterval: 1
+
+      INTERFACE DESCRIPTOR (2.0): class CDC-Data
+        bLength: 9
+        bDescriptorType: 0x04 (INTERFACE)
+        bInterfaceNumber: 2
+        bAlternateSetting: 0
+        bNumEndpoints: 2
+        bInterfaceClass: CDC-Data (0x0a)
+        bInterfaceSubClass: 0x00
+        bInterfaceProtocol: No class specific protocol required (0x00)
+        iInterface: 0
+
+      ENDPOINT DESCRIPTOR
+        bLength: 7
+        bDescriptorType: 0x05 (ENDPOINT)
+        bEndpointAddress: 0x82 IN Endpoint:2
+        bmAttributes: 0x02
+        wMaxPacketSize: 64
+        bInterval: 0
+
+      ENDPOINT DESCRIPTOR
+        bLength: 7
+        bDescriptorType: 0x05 (ENDPOINT)
+        bEndpointAddress: 0x02 OUT Endpoint:2
+        bmAttributes: 0x02
+        wMaxPacketSize: 64
+        bInterval: 0

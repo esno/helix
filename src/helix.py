@@ -8,7 +8,6 @@ class dna75:
 
     def __init__(self):
         self._connect()
-        self._disconnect()
 
     def _connect(self):
         self.h = hid.device()
@@ -20,13 +19,14 @@ class dna75:
             self.h.get_manufacturer_string(),
             self.h.get_serial_number_string()))
 
-    def _disconnect(self):
+    def disconnect(self):
         self.h.close()
 
 class helix:
     def __init__(self):
         try:
             dna = dna75()
+            dna.disconnect()
         except OSError:
             print('there is no dna chip available')
 
