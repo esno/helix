@@ -148,7 +148,7 @@
     Device Status:     0x0000
       (Bus Powered)
 
-# USB
+# USB message types
 
 ## GET DESCRIPTOR (DEVICE)
 
@@ -168,3 +168,15 @@ discover device information
 
 all USB devices have at least one configuration descriptor. the amount of config descriptors is returned in the device descriptor.
 each configuration descriptor has at least one interface descriptor and each interface descriptor up to 15 endpoints descriptors.
+
+## SET CONFIGURATION
+
+set device configuration
+
+## GET DESCRIPTOR (HID Report)
+
+requests the device usages and reports that describes the device characteristics
+
+## SET INTERFACE
+
+select an alternative setting to be used for particular interface of the current configuration.
