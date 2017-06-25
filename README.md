@@ -2,6 +2,10 @@
 
 this is a prototype to configure dna75 chips on linux distributions.
 
+## dna75
+
+The DNA 75 is a power regulated digital switch-mode DC-DC converter for personal vaporizers.
+
 ## dependencies
 
 * python-hidapi (https://github.com/trezor/cython-hidapi)
