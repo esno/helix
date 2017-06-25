@@ -368,3 +368,152 @@ select an alternative setting to be used for particular interface of the current
         bmAttributes: 0x02
         wMaxPacketSize: 64
         bInterval: 0
+
+    SET CONFIGURATION Request
+      bmRequestType: 0x00
+      bRequest: SET CONFIGURATION (9)
+      bConfigurationValue: 1
+      wIndex: 0 (0x0000)
+      wLength: 0
+
+    GET DESCRIPTOR Request STRING
+      bmRequestType: 0x80
+      bRequest: GET DESCRIPTOR (6)
+      Descriptor Index: 0x03
+      bDescriptorType: 0x03
+      Language Id: English (United States) (0x0409)
+      wLength: 4
+
+    GET DESCRIPTOR Response STRING
+      bLength: 26
+      bDescriptorType: 0x03 (STRING)
+      bString: E
+
+    GET DESCRIPTOR Request STRING
+      bmRequestType: 0x80
+      bRequest: GET DESCRIPTOR (6)
+      Descriptor Index: 0x03
+      bDescriptorType: 0x03
+      Language Id: English (United States) (0x0409)
+      wLength: 26
+
+    GET DESCRIPTOR Response STRING
+      bLength: 26
+      bDescriptorType: 0x03 (STRING)
+      bString: Evolv DNA 75
+
+    SET_IDLE Request
+      bmRequestType: 0x21
+      bRequest: SET_IDLE (0x0a)
+      wValue: 0x0000
+      wIndex: 0
+      wLength: 0
+
+    GET DESCRIPTOR Request HID Report
+      bmRequestType: 0x81
+      bDescriptorIndex: 0x00
+      bDescriptorType: HID Report (0x22)
+      wInterfaceNumber: 0
+      wDescriptorLength: 95
+
+    GET DESCRIPTOR Response HID Report
+      HID Report
+        Global item (Usage)
+          Header
+            bSize: 2 bytes (2)
+            bType: Global (1)
+            bTag: Usage (0x0)
+          Usage page: [Vendor-defined] (0xff00)
+        Global item (Logical minimum)
+          Header
+            bSize: 1 byte (1)
+            bType: Global (1)
+            bTag: Logical minimum
+          Logical minimum: 0
+        Global item (Logical maximum)
+          Header
+            bSize: 2 bytes (2)
+            bType: Global (1)
+            bTag: Logical maximum (0x2)
+          Logical maximum: 255
+        Global item (Report size)
+          Header
+            bSize: 1 byte (1)
+            bType: Global (1)
+            bTag: Report size (0x7)
+          Report size: 8
+        Local item (Usage)
+          Header
+            bSize: 1 byte (1)
+            bType: Local (2)
+            bTag: Usage (0x0)
+          Usage: [Vendor-defined] (0xff01)
+        Main item (Collection)
+          Header
+            bSize: 1 byte (1)
+            bType: Main (0)
+            bTag: Collection (0xa)
+          Collection type: Application (0x01)
+          Global item (Report ID)
+            Header
+              bSize: 1 byte (1)
+              bType: Global (1)
+              bTag: Report ID (0x8)
+            Report ID: 0x01
+          Local item (Usage)
+            Header
+              bSize: 1 byte (1)
+              bType: Local (2)
+              bTag: Usage (0x0)
+            Usage: [Vendor-defined] (0xff01)
+          Global item (Report count)
+            Header
+              bSize: 1 byte (1)
+              bType: Global (1)
+              bTag: Report count (0x9)
+            Report count: 62
+          Main item (Input)
+            Header
+              bSize: 2 bytes (2)
+              bType: Main (0)
+              bTag: Input (0x8)
+              Data/constant: Data
+              Data type: Variable
+              Coordinates: Absolute
+              Min/max wraparound: No Wrap
+              Physical relationship to data: Linear
+              Preferred state: Preferred State
+              Has null position: No Null position
+              [Reserved]: False
+              Bits or bytes: Buffered Bytes
+          Local item (Usage)
+            Header
+              bSize: 1 byte (1)
+              bType: Local (2)
+              bTag: Usage (0x0)
+            Usage: [Vendor-defined] (0xff01)
+          Global item (Report count)
+            Header
+              bSize: 1 byte (1)
+              bType: Global (1)
+              bTag: Report count (0x9)
+            Report count: 62
+          Main item (output)
+            Header
+              bSize: 2 bytes (2)
+              bType: Main (0)
+              bTag: Output (0x9)
+              Data/constant: Data
+              Data type: Variable
+              Coordinates: Absolute
+              Min/max wraparound: No Wrap
+              Physical relationship to data: Linear
+              Preferred state: Preferred State
+              Has null position: No Null position
+              (Non)-volatile: Non Volatile
+              Bits or bytes: Buffered Bytes
+          Main item (End collection)
+            Header
+              bSize: 0 bytes (0)
+              bType: Main (0)
+              bTag: End collection (0xc)
