@@ -193,7 +193,18 @@ requests the device usages and reports that describes the device characteristics
 
 select an alternative setting to be used for particular interface of the current configuration.
 
-# wireshark dumped messages
+# wireshark
+
+## how to capture traffic
+
+* install windows into virtualbox
+* load usbmon on linux host
+* identify usbmon device
+* capture traffic on usbmon device
+* filter for `usb.bus_id == <busid> and usb.device_address == <deviceaddr>`
+* trigger events in windows vm to capture transfer protocol
+
+## traffic dump
 
     GET DESCRIPTOR Request DEVICE
       bmRequestType: 0x80
